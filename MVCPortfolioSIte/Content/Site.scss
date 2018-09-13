@@ -1,0 +1,644 @@
+﻿/*--------------------------------------------------------------------------------------------Variables--------------------------------------------------------------------------------------------*/
+$primary-color: #295967;
+$primary-color-bright: #266976;
+$background-color: rgba(0,0,0,.80);
+$background-color2: rgba(255, 255, 255, .8);
+$background-color3: rgba(0,0,0,.25);
+$black-color: rgba(0,0,0,1);
+$text-color1: #fff;
+$text-color2: #000;
+$text-color-faded: rgba(255, 255, 255, 0.35); 
+$primary-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+/*--------------------------------------------------------------------------------------------Global Styles--------------------------------------------------------------------------------------------*/
+html, body {
+    font-family: $primary-font;
+    height: 100%;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0,0,0,.75);
+    font-size: 27px;
+}
+
+footer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100px;
+    background-color: $primary-color;
+    color: $text-color1;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer > p {
+    text-align: center;
+    display: inline-block;
+    padding-top: 30px;
+}
+
+ul.no-bullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+/*--------------------------------------------------------------------------------------------Video Background--------------------------------------------------------------------------------------------*/
+/* Video Overlay */
+
+#overlay {
+    background-color: $background-color3;
+    height: 100%;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding-bottom: 60px;
+}
+/* Keys Video + Fallback */
+
+#keys-vid {
+    backface-visibility: hidden;
+    background-size: cover;
+    bottom: 0;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    right: 0;
+    width: auto;
+    z-index: -1;
+}
+
+#mobile-view {
+    backface-visibility: hidden;
+    background-size: cover;
+    bottom: 0;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    right: 0;
+    width: auto;
+    z-index: -1;
+    display: none;
+}
+
+@media (max-width: 767px) {
+    #keys-vid {
+        display: none !important;
+    }
+    #mobile-view {
+        display: inline-block;
+    }
+}
+
+/*--------------------------------------------------------------------------------------------Navbar Styling--------------------------------------------------------------------------------------------*/
+.navbar.navbar-static-top {
+    background-color: $background-color;
+    border-color: transparent;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.nav.navbar-nav > li > a {
+    color: $text-color1;
+    display: block;
+    border: 5px solid transparent;
+}
+
+.nav.navbar-nav > li > a:hover,
+a:focus {
+    background-color: transparent;
+    border: 5px solid $primary-color;
+    color: $text-color1;
+    border-radius: 5px;
+}
+
+a.navbar-brand {
+    color: $text-color1;
+    font-weight: bold;
+    font-size: 150%;
+    line-height: 25px;
+}
+
+a.navbar-brand:focus {
+    background-color: transparent;
+    outline: none;
+    border-color: transparent;
+}
+
+a.navbar-brand:hover {
+    color: $primary-color;
+}
+
+span.icon-bar {
+    background-color: $text-color1;
+}
+
+span.icon-bar:hover {
+    color: $primary-color;
+}
+
+/*---Navbar 2---*/
+#navbar2 {
+}
+/*---Hamburger Menu Animation---*/
+.navbar-toggle {
+    border: none !important;
+    outline: none;
+    background: transparent !important;
+}
+
+.navbar-collapse {
+    border: none !important;
+    outline: none;
+}
+
+#aboutnav:focus {
+    background-color: transparent !important;
+    outline: none !important;
+}
+
+.navbar-toggle:hover {
+    background: transparent !important;
+}
+
+.navbar-toggle .icon-bar {
+    width: 22px;
+    transition: all 0.2s;
+}
+
+.navbar-toggle .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggle .middle-bar {
+    opacity: 0;
+}
+
+.navbar-toggle .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+
+.navbar-toggle.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggle.collapsed .middle-bar {
+    opacity: 1;
+}
+
+.navbar-toggle.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+
+
+/*---Navbar Media Queries---*/
+@media (max-width: 575px) {
+    button.navbar-toggler {
+        position: absolute !important;
+        right: 10px !important;
+        top: 14px !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    a.navbar-brand {
+        font-size: 115%;
+    }
+}
+
+@media (max-width: 989px) {
+    a.navbar-brand {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 415px) {
+    a.navbar-brand {
+        font-size: 80%;
+    }
+}
+/*--------------------------------------------------------------------------------------------Cover--------------------------------------------------------------------------------------------*/
+
+.cover .btn-block {
+    padding: .75rem 1.25rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+
+.cover {
+    position: relative;
+}
+
+
+
+/*---Cover Media Queries---*/
+@media (max-width: 767px) {
+    p.lead {
+        font-size: 27px;
+    }
+
+    h1.cover-heading {
+        font-size: 38px !important;
+    }
+}
+
+
+
+
+a.btn.btn-block.btn-default {
+    background: $primary-color;
+    color: $text-color1;
+    border-color: $primary-color;
+    padding: 10px 0px 10px 0px;
+    font-size: 36px;
+}
+
+a.btn.btn-block.btn-default:hover {
+    background-color: $primary-color-bright;
+}
+
+h1.cover-heading {
+    font-family: $primary-font;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $text-color-faded;
+    font-size: 50px;
+}
+
+p.lead {
+    padding: 20px 0px 20px 0px;
+}
+
+.lead {
+    font-size: 36px;
+    font-weight: lighter;
+}
+/*---Extra markup and styles for table-esque vertical and horizontal centering---*/
+.site-wrapper {
+    width: 100%;
+    height: 100%; /* For at least Firefox */
+    min-height: 100%;
+    padding-top: 50px;
+    z-index: 3;
+    color: $text-color1;
+    display: table;
+}
+
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*---Padding for spacing---*/
+.inner {
+    padding: 100px;
+}
+/*--------------------------------------------------------------------------------------------Profile--------------------------------------------------------------------------------------------*/
+#profile:focus {
+    outline: 0 !important; /*Removes blue outline on div when navigated via btn anchor*/
+}
+
+#profile {
+    position: relative;
+}
+/*--------------------------------About Section--------------------------------*/
+
+#about_content {
+    color: $text-color1;
+    background-color: $background-color;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    text-align: left;
+    padding-top: 80px;
+}
+
+#about_content p {
+    margin-bottom: 1.3rem;
+    text-align: left !important;
+}
+
+#about_content h2 {
+    text-align: left;
+}
+
+h2.abt_right.head {
+    font-weight: bold;
+    color: $primary-color;
+    font-family: $primary-font;
+}
+
+h1.abt_right, h1.abt_left {
+    text-align: left;
+    font-family: $primary-font;
+}
+
+/*------About Media Queries------*/
+@media (min-width: 992px) {
+    h1.abt_left, h1.abt_right {
+        text-align: left !important;
+    }
+}
+
+@media (max-width: 991px) {
+    h1.abt_left, h1.abt_right {
+        text-align: center !important;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 479px) {
+    #about_content {
+        font-size: 70%;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    #about_content {
+        font-size: 80%;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    #about_content {
+        font-size: 90%;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    #about_content {
+        font-size: 100%;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    #about_content {
+        font-size: 110%;
+    }
+}
+
+/*--------------------------------Skills Section--------------------------------*/
+#skills_content {
+    background-color: $background-color2;
+    color: $text-color2;
+    font-family: $primary-font;
+    padding: 20px 0px 40px 0px;
+}
+
+h1.skills_header {
+    font-family: $primary-font;
+}
+
+i.fa.fa-star:hover, i.fa.fa-star-o:hover {
+    font-size: 120%;
+}
+
+.skills-title {
+    display: inline-block;
+    width: 60%;
+    text-align: left;
+}
+
+.skills-stars {
+    float: right;
+    width: 40%;
+}
+
+i.fa.fa-star, i.fa.fa-star-o {
+    color: $primary-color;
+}
+
+#skills_content > .container > .row > .col-md-6 > .container > ul.no-bullets > li:hover {
+    background: #cccccc;
+}
+
+/*------Skills Media Queries------*/
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 479px) {
+    #skills_content {
+        font-size: 70%;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    #skills_content {
+        font-size: 80%;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    #skills_content {
+        font-size: 90%;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    #skills_content {
+        font-size: 100%;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    #skills_content {
+        font-size: 110%;
+    }
+}
+
+/*--------------------------------XP Section--------------------------------*/
+#xp_content {
+    background-color: $background-color;
+    padding: 20px 0px 40px 0px;
+    color: $text-color1;
+}
+
+.row1, .row2, .row3 {
+    padding-bottom: 20px;
+}
+
+h2.media-heading {
+    text-align: left;
+}
+
+.media-body > p {
+    text-align: left;
+}
+
+img.pull-left {
+    padding-right: 20px;
+}
+
+p.img {
+    height: 64px;
+    width: 64px;
+    background-image: url(~/img/Molina.PNG);
+    background-repeat: no-repeat;
+}
+
+button.btn.btn-block.button-blue {
+    background-color: $primary-color;
+    color: $text-color1;
+    height: 80px;
+    font-family: $primary-font;
+    font-size: 100%;
+}
+
+button.btn.btn-block.button-blue:hover {
+    background-color: $primary-color-bright;
+}
+
+button.btn.btn-block.button-blue:focus {
+    outline: none;
+}
+
+#collapse1, #collapse2, #collapse3 {
+    font-size: 80%;
+    text-align: left !important;
+}
+
+/* Media Queries*/
+@media (max-width: 991px) {
+
+    button.btn.btn-block.button-blue.btn3 {
+        margin-top: 30px;
+    }
+}
+/*--------------------------------Education Section--------------------------------*/
+
+#education {
+    background-color: $background-color2;
+    color: $text-color2;
+}
+
+.ed_location {
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.ed_date {
+    font-size: 80%;
+    font-style: italic;
+    text-align: left;
+}
+
+.ed_studies {
+    text-align: left;
+    font-size: 80%;
+}
+
+
+/****************************************************************************CONTACT PAGE***************************************************************************/
+
+#contact {
+    position: relative;
+    padding-top: 70px;
+    color: $text-color1;
+    font-family: $primary-font;
+
+}
+
+.contact_header {
+    font-size: 50px !important;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $text-color-faded;
+}
+
+.contact_paragraph {
+    font-size: 36px;
+    padding: 20px 0px 20px 20px;
+}
+
+#overlay2 {
+    background-color: $background-color3;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding-bottom: 200px;
+}
+/* Keys Video + Fallback */
+
+#keys-vid2 {
+    backface-visibility: hidden;
+    background-size: cover;
+    bottom: 0;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    right: 0;
+    width: auto;
+    z-index: -1;
+}
+.container-fluid {
+    min-height: 100%;
+    position: relative;
+}
+.contact_btn1 {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: $text-color1;
+    height: 80px;
+    font-size: 100%;
+}
+.contact_btn1:hover, .contact_btn1:focus {
+    background-color: $primary-color-bright;
+    color: $text-color1;
+    border-color: $primary-color-bright;
+}
+.contact_btn2 {
+    background-color:$primary-color;
+    border-color: $primary-color;
+    color: $text-color1;
+    height: 80px;
+    font-family: $primary-font;
+    font-size: 100%;
+
+}
+.contact_btn2:hover, .contact_btn2:focus {
+    background-color:$primary-color-bright;
+    border-color: $primary-color-bright;
+    color: $text-color1;
+}
+.network-name { 
+    padding-top: 15px;
+}
+
+
+/* Contact Us Media Queries */
+@media (max-width: 767px) {
+    .contact_paragraph {
+        font-size: 27px;
+    }
+
+    .contact_header {
+        font-size: 38px !important;
+    }
+}
